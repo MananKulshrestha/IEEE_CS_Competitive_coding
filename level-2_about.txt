@@ -1,0 +1,42 @@
+
+The intervals class initializes with an empty list called intervals to store ranges.
+Add Interval (addInterval method)
+
+Adds a new interval (a, b) to the list.
+Sorts the list to ensure correct order.
+Merges overlapping intervals by iterating through the sorted list.
+Get Intervals (getIntervals method)
+
+Prints the final list of merged intervals.
+
+input:-
+interval1 = intervals()
+interval1.addInterval(9, 11)
+interval1.addInterval(1, 5)
+interval1.addInterval(6, 8)
+interval1.addInterval(4, 7)
+interval1.addInterval(2, 5)
+interval1.addInterval(6, 9)
+interval1.addInterval(1, 7)
+interval1.addInterval(4, 10)
+interval1.addInterval(0, 2)
+
+interval1.getIntervals()
+
+output:-
+[[0, 11]]
+
+Sample-2:-
+
+input:-
+interval2 = intervals()
+interval2.addInterval(1, 3)
+interval2.addInterval(5, 7)
+interval2.addInterval(9, 11)
+interval2.addInterval(13, 15)
+
+interval2.getIntervals()
+
+
+output:-
+[[1, 3], [5, 7], [9, 11], [13, 15]]

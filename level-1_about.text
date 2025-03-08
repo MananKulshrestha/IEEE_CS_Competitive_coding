@@ -1,0 +1,74 @@
+This document explains the implementation of a stack using Python. A stack follows the LIFO (Last In, First Out) principle, meaning the last element added is the first one to be removed.
+
+Structure of the Implementation
+Stack Class
+
+The Stack class is initialized with an empty list (items).
+Various methods provide operations on the stack.
+Push (push method)
+
+Adds an item to the top of the stack using append().
+Pop (pop method)
+
+Removes and returns the top item from the stack.
+If the stack is empty, it prints a message.
+Peek (peek method)
+
+Returns the top element without removing it.
+If the stack is empty, it prints a message.
+Size (size method)
+
+Returns the number of elements in the stack.
+Display (display method)
+
+Prints the entire stack content.
+If the stack is empty, it prints a message.
+
+Sample input-1:-
+
+stack = Stack()
+
+stack.push(10)
+stack.push(20)
+stack.push(30)
+
+stack.display()
+print("Peek top element:", stack.peek())
+
+print("Popped element:", stack.pop())
+
+print("Stack size:", stack.size())
+stack.display()
+
+output:-
+
+Stack contents: [10, 20, 30]  
+Peek top element: 30  
+Popped element: 30  
+Stack size: 2  
+Stack contents: [10, 20]  
+
+
+Sample input-2:-
+
+input:-
+
+stack = Stack()
+
+stack.push(5)
+stack.push(15)
+
+stack.display()
+print("Popped element:", stack.pop())
+print("Popped element:", stack.pop())
+
+print("Popped element:", stack.pop())  # Trying to pop from an empty stack
+stack.display()
+
+output:-
+
+Stack contents: [5, 15]  
+Popped element: 15  
+Popped element: 5  
+Stack is empty
+Stack is empty  
