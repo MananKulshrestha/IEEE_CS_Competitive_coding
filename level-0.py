@@ -32,7 +32,7 @@ class DLL:
         curt.next = new_node
         new_node.prev = curt
 
-    def traverse_forward(self):
+    def traverse_backward(self):
     #traversing from the tail to the head printing all the elements
         curt = self.head
         while curt.next:
@@ -40,7 +40,7 @@ class DLL:
             curt = curt.next
         print(curt.data)
 
-    def traverse_backward(self):
+    def traverse_forward(self):
     # traversing from the head to the tail printing all the elements
         if self.head is None:
             return
@@ -55,10 +55,12 @@ class DLL:
 
 
 dll = DLL()
-dll.ins_front(10)
-dll.ins_front(5)
-dll.ins_back(20)
-dll.ins_back(30)
+dll.ins_front(6)
+dll.ins_front(-2)
+dll.ins_back(0)
+dll.ins_back(0)
+dll.ins_front(6)
+dll.ins_front(7)
 
 print("Forward Traversal:- ")
 dll.traverse_forward()

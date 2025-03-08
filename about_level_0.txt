@@ -1,0 +1,79 @@
+This report describes how a doubly linked list (DLL) is created in Python. The DLL contains nodes, which have pointers for the previous node and the next node, permitting traversal in two directions.
+
+Node Class
+All nodes in the DLL are represented by the Node class. It has:
+data: Holds the node's value.
+prev: Pointer to the previous node.
+next: Pointer to the next node.
+DLL Class
+The DLL class is the representation of the doubly linked list and contains several operations:
+
+Initialization (__init__ method)
+
+The DLL class creates an empty linked list with head = None.
+Insertion at the Front (ins_front method)
+
+A new node is created and added at the front of the list.
+If the list is empty, the new node is made the head.
+Otherwise, the next pointer of the new node is assigned the current head, and the prev pointer of the current head is assigned the new node.
+The head pointer is assigned the new node.
+Insertion at the Back (ins_back method)
+
+A new node is created and added to the end of the list.
+If the list is empty, the new node is assigned as the head.
+Otherwise, the method traverses the list to locate the last node and sets its next pointer to the new node, and the new node's prev pointer to the last node.
+Forward Traversal (traverse_forward method)
+
+Prints the list elements from the head to the tail.
+Traverses the list via the next pointer and prints the values with arrows in between (->).
+Backward Traversal (traverse_backward method)
+
+Prints the list elements from the tail to the head.
+It first goes to the last node, then goes backwards using the prev pointer, printing the values with arrows (->) between them.
+
+Sample Input and Output
+Input:
+
+dll = DLL()
+dll.ins_front(10)
+dll.ins_front(5)
+dll.ins_back(20)
+dll.ins_back(30)
+
+print("Forward Traversal:- ")
+dll.traverse_forward()
+
+print("Backward Traversal:-")
+dll.traverse_backward()
+
+Output:
+
+Forward Traversal:- 
+30->20->10->5
+Backward Traversal:-
+5->10->20->30
+
+Sample-2:-
+
+Input:
+
+dll = DLL()
+dll.ins_front(6)
+dll.ins_front(-2)
+dll.ins_back(0)
+dll.ins_back(0)
+dll.ins_front(6)
+dll.ins_front(7)
+
+print("Forward Traversal:- ")
+dll.traverse_forward()
+
+print("Backward Traversal:-")
+dll.traverse_backward()
+
+Output:
+
+Forward Traversal:- 
+0->0->6->-2->6->7
+Backward Traversal:-
+7->6->-2->6->0->0
